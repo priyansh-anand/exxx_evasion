@@ -7,5 +7,6 @@ cp module/* ~/.exxx_evasion/module
 (cat ~/.bashrc && printf "\nexport PATH=\$PATH:~/.exxx_evasion\n") > ~/.bashrc_
 mv ~/.bashrc_ ~/.bashrc
 chmod +x ~/.exxx_evasion/exxx_evasion
+pip3 install termcolor
 echo "[+] Installed exxx_evasion"
 bash
