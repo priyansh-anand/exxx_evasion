@@ -1,0 +1,5 @@
+#!/bin/python3
+
+from module.main import main
+
+main()

@@ -1,0 +1,24 @@
+1 MANIFEST  "template.exe.manifest"
+1 VERSIONINFO
+FILEVERSION     1,4,2,257
+PRODUCTVERSION  1,5,2,128
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "080904E4"
+    BEGIN
+      VALUE "CompanyName", "Microsoft Corp."
+      VALUE "FileDescription", "Windows Defender Service"
+      VALUE "FileVersion", "1.4.2.257"
+      VALUE "InternalName", "Windows Defender"
+      VALUE "LegalCopyright", "Microsoft Corp."
+      VALUE "OriginalFilename", "Windows Defender.exe"
+      VALUE "ProductName", "Windows Defender"
+      VALUE "ProductVersion", "1.5.2.128"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x809, 1252
+  END
+END

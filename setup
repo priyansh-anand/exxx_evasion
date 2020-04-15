@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "[!] Installing exxx_evasion"
+mkdir -p ~/.exxx_evasion
+mkdir -p ~/.exxx_evasion/module
+cp exxx_evasion ~/.exxx_evasion/
+cp module/* ~/.exxx_evasion/module
+(cat ~/.bashrc && printf "\nexport PATH=\$PATH:~/.exxx_evasion\n") > ~/.bashrc_
+mv ~/.bashrc_ ~/.bashrc
+chmod +x ~/.exxx_evasion/exxx_evasion
+echo "[+] Installed exxx_evasion"
+bash
