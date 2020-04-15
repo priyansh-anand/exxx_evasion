@@ -1,5 +1,5 @@
 # EXXX EVASION!
-**DO NOT UPLOAD TO VIRUSTOTAL.NET INSTEAD USE NODISTRIBUTE.COM**
+**DO NOT UPLOAD TO [VIRUSTOTAL.COM](https://virustotal.com) INSTEAD USE [NODISTRIBUTE.COM](https://nodistribute.com)**
 ```
 
  /$$$$$$$$ /$$   /$$ /$$   /$$ /$$   /$$       /$$$$$$$$ /$$    /$$  /$$$$$$   /$$$$$$  /$$$$$$  /$$$$$$  /$$   /$$
@@ -44,8 +44,8 @@ It will show required info after every step
 
 # Features
 There are 2 modules in this tool:
-* Undetectable Reverse Shell ( Bypasses Windows Defender )
-	* It doesn't requires Admin Priviledges to run
+* Undetectable Reverse Shell
+	* Doesn't requires Admin Priviledges to run
 	* Bypassess all antiviruses including Windows Defender
 	* Just an undetectable meterpreter reverse_shell
 	* Migrates automatically to explorer.exe just after running
@@ -65,9 +65,10 @@ There are 2 modules in this tool:
 * Make all payloads persistent by default
 # License
 MIT
+
 **Free Software, Hell Yeah!**
 
 # Warning
-This tool is for educational purposes only. I am not responsible if you do any illegal act with this tool. Use it wisely.
+This tool is for educational purposes only. I am not responsible if you do any illegal act using this tool. Use it wisely.
 # Contribution
-If you want to add any feature or fixing any bug, i am welcoming you to do that. You can also request/suggest for more aweome features to be added in this tool
+If you want to add any new feature or fix any bug, I welcome you to do that. You can also request/suggest for more awesome features to be added in this tool
