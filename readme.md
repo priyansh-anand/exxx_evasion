@@ -20,6 +20,8 @@
 ```
 Generating fully undetectable meterpreter custom payloads using msfvenom and custom loader template. It bypasses the latest Windows Defender running on Windows 10 Pro 1903 ( Build 18363.693 ) with all updates available till 16th of March, 2020.
 
+Author : [Priyansh Anand](https://github.com/priyansh-anand)
+
 # Requirements
 > * Python 3
 > * msfvenom
