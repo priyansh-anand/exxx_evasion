@@ -1,10 +1,19 @@
+#!/bin/python3
+
 from shutil import which
 from time import sleep
 
 import os, random, re, platform
 
+try:
+    import requests
+except:
+    print("[-] Cannot import python module requests | Install using pip3 install requests", "red")
+
 # Original file path
 dir_path = os.path.dirname(os.path.realpath(__file__))
+
+__version__ = open(os.path.join(dir_path, "version"),"r+").read()
 
 if platform.system() == 'Linux':
     gcc = 'x86_64-w64-mingw32-g++'
@@ -122,6 +131,42 @@ def clear():
         os.system('cls')
         print_banner()
 
+def update_version(latest_version):
+    os.chdir("/tmp")
+    os.system("git clone https://github.com/priyansh-anand/exxx_evasion.git")
+    os.chdir("exxx_evasion")
+    os.system("chmod +x setup")
+    os.system("./setup")
+    updated_version = open("~/.exxx_evasion/module/version.txt","r+").read()
+    try:
+        if updated_version == latest_version:
+            print("[+] Version updated successfully", "green")
+            exit(0)
+        else:
+            print("[-] Update wasn't successful, try cloning from GitHub directly", "red")
+    except:
+        print("[-] Update wasn't successful, try cloning from GitHub directly", "red")
+
+def check_version():
+    try:
+        version = requests.get("https://raw.githubusercontent.com/priyansh-anand/exxx_evasion/master/version")
+        if "404: Not Found" == version.text:
+            print("[-] Cannot check for version update", "red")
+            return
+    except:
+        print("[-] Cannot check for update", "red")
+        return
+    
+    current_version = [int(v) for v in __version__.split(".")]
+    version = [int(v) for v in version.text.split(".")]
+    for i in range(min(len(current_version), len(version))):
+        if current_version[i] < version[i]:
+            update_version(".".join([str(v) for v in version]))
+    
+    if len(current_version) < len(version):
+        update_version(".".join([str(v) for v in version]))
+    
+    print("[!] Already the latest version", "green")
 
 def main():
     not_installed_pacakges = list()
@@ -152,7 +197,8 @@ def main():
     else:
         print('[~] All required packages are installed', 'yellow')
     
-    print('[!] Loading...', 'yellow')
+    print('[!] Checking for updates...', 'yellow')
+    check_version()
     sleep(2)
     print_banner()
 

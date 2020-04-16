@@ -13,3 +13,6 @@
             ##########################################################################################
             ######## WARNING : DO NOT TEST THIS EXECUTABLE ON ANY COMPUTER THAT YOU DON'T OWN ########
             ##########################################################################################
+										
+									       Author : github.com/priyansh-anand
+										  [!] Star this project on GitHub

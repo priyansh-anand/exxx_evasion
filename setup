@@ -8,5 +8,6 @@ cp module/* ~/.exxx_evasion/module
 mv ~/.bashrc_ ~/.bashrc
 chmod +x ~/.exxx_evasion/exxx_evasion
 pip3 install termcolor
+pip3 install requests
 echo "[+] Installed exxx_evasion"
 bash
