@@ -1,4 +1,4 @@
-# EXXX EVASION!
+# EXXX EVASION v1.1!
 **DO NOT UPLOAD TO [VIRUSTOTAL.COM](https://virustotal.com) INSTEAD USE [NODISTRIBUTE.COM](https://nodistribute.com)**
 ```
 
