@@ -25,7 +25,7 @@ elif platform.system() == 'Windows':
 
 else:
     print('[-] Only Windows and Linux are supported')
-    exit(0)
+    exit()
 
 def print_banner():
     if platform.system() == "Linux":
@@ -132,16 +132,18 @@ def clear():
         print_banner()
 
 def update_version(latest_version):
+    cwd = os.getcwd()
     os.chdir("/tmp")
     os.system("git clone https://github.com/priyansh-anand/exxx_evasion.git")
     os.chdir("exxx_evasion")
     os.system("chmod +x setup")
     os.system("./setup")
+    os.chdir(cwd)
     updated_version = open("~/.exxx_evasion/module/version.txt","r+").read()
     try:
         if updated_version == latest_version:
             print("[+] Version updated successfully", "green")
-            exit(0)
+            exit()
         else:
             print("[-] Update wasn't successful, try cloning from GitHub directly", "red")
     except:
@@ -149,7 +151,7 @@ def update_version(latest_version):
 
 def check_version():
     try:
-        version = requests.get("https://raw.githubusercontent.com/priyansh-anand/exxx_evasion/master/version")
+        version = requests.get("https://raw.githubusercontent.com/priyansh-anand/exxx_evasion/master/module/version")
         if "404: Not Found" == version.text:
             print("[-] Cannot check for version update", "red")
             return
@@ -193,7 +195,7 @@ def main():
     
     if not_installed_pacakges:
         print(f"[-] These packages are required and not installed : {', '.join(not_installed_pacakges)}", 'red')
-        exit(0)
+        exit()
     else:
         print('[~] All required packages are installed', 'yellow')
     
